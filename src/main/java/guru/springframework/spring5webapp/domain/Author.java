@@ -3,10 +3,7 @@
 
 package guru.springframework.spring5webapp.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.awt.print.Book;
 import java.util.Set;
 
@@ -22,6 +19,9 @@ public class Author {
 
     private String firstName;
     private String lastName;
+
+    // set relationship
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
 
 public Author(){

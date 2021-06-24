@@ -1,5 +1,5 @@
 /** Created by MrsMonkey95 on 24.06.2021
- *  for Spring Framework 5 course, JPA entities; Equality in Hibernate. */
+   for Spring Framework 5 course, JPA entities; Equality in Hibernate. */
 package guru.springframework.spring5webapp.domain;
 
 import javax.persistence.*;

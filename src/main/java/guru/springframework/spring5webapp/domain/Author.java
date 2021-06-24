@@ -1,5 +1,5 @@
 /** Created by MrsMonkey95 on 24.06.2021
- *  for Spring Framework 5 course, JPA Entities. */
+ *  for Spring Framework 5 course, JPA Entities; Equality in Hibernate. */
 
 package guru.springframework.spring5webapp.domain;
 
@@ -62,5 +62,31 @@ public Author(){
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
+    }
+
+    // Set equals() and HashCode() for id
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Author author = (Author) o;
+
+        return id == author.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) (id ^ (id >>> 32));
     }
 }

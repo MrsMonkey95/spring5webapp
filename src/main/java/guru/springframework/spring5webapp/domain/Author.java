@@ -4,7 +4,6 @@
 package guru.springframework.spring5webapp.domain;
 
 import javax.persistence.*;
-import java.awt.print.Book;
 import java.util.Set;
 
 @Entity
